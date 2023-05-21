@@ -3,16 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inject", "inject\inject.vcxproj", "{27FD53A2-D0AF-4430-9980-0B6EB649866A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1} = {B81B5BFF-CF7B-479C-8CE8-44BE008477A1}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inject_me", "inject_me\preload_me.vcxproj", "{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ddb_dev", "ddb_dev\ddb_dev.vcxproj", "{495C3E8C-D251-4FA1-AA6E-5C89D97FCD1E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exporter", "exporter\exporter.vcxproj", "{6B866516-BBFF-4C00-8513-0C0F3C351001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB4A6D11-589B-4052-A788-F72520A631DA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,22 +20,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Debug|x64.ActiveCfg = Debug|x64
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Debug|x64.Build.0 = Debug|x64
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Debug|x86.ActiveCfg = Debug|Win32
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Debug|x86.Build.0 = Debug|Win32
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Release|x64.ActiveCfg = Release|x64
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Release|x64.Build.0 = Release|x64
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Release|x86.ActiveCfg = Release|Win32
-		{27FD53A2-D0AF-4430-9980-0B6EB649866A}.Release|x86.Build.0 = Release|Win32
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Debug|x64.ActiveCfg = Debug|x64
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Debug|x64.Build.0 = Debug|x64
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Debug|x86.ActiveCfg = Debug|Win32
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Debug|x86.Build.0 = Debug|Win32
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Release|x64.ActiveCfg = Release|x64
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Release|x64.Build.0 = Release|x64
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Release|x86.ActiveCfg = Release|Win32
-		{B81B5BFF-CF7B-479C-8CE8-44BE008477A1}.Release|x86.Build.0 = Release|Win32
 		{495C3E8C-D251-4FA1-AA6E-5C89D97FCD1E}.Debug|x64.ActiveCfg = Debug|x64
 		{495C3E8C-D251-4FA1-AA6E-5C89D97FCD1E}.Debug|x64.Build.0 = Debug|x64
 		{495C3E8C-D251-4FA1-AA6E-5C89D97FCD1E}.Debug|x86.ActiveCfg = Debug|Win32
