@@ -26,5 +26,6 @@ To do this:
 
 - the exporter project creates an executable that can extract dll exports, and format them in the style of linker commands - you don't have to do that yourself, project is just here for reference
 - the ddb_dev project uses the output from the above (ddb_dev.cpp) to forward all functions but one to the original library, and implement the single function we want to alter
+- the result is a ddb_dev.dll shim library which unlocks the hidden IP
 
 For more info [check this blog](https://devops.lol/azure-fpga).
