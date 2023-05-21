@@ -4,8 +4,6 @@ For Linux refer to [this repo](https://github.com/ruurdk/sv_second_pcie_hip/tree
 
 ## Getting started
 
-Here you'll just find the technical how-to. For documentation of how this works [check this blog](https://devops.lol/azure-fpga).
-
 0. Prerequisites - Install Visual Studio Community Edition (tested with 2022)
 1. Building: open the solution file, and build it.
 2. Go to the quartus binary folder (e.g. C:\intelFPGA\22.1std\quartus\bin64), and change the ddb_dev.dll name to ddb_dev_orig.dll
@@ -21,10 +19,12 @@ mv ddb_dev.dll ddb_dev_orig.dll
 ## How does this work?
 
 The original code for Linux depends on LD_PRELOAD to override a single library function by preloading a library with just that function.
-There is no such thing in Windows (yes there were appinit dlls but we all know that story).
+There is no such thing in Windows (yes there were appinit dlls but that's [not an adviced route these days](https://learn.microsoft.com/en-us/windows/win32/dlls/secure-boot-and-appinit-dlls)).
 The solution presented here depends on creating a wrapper library: we export and forward every function found in the target library to the original library, and only implement the changed function.
 
 To do this:
 
 - the exporter project creates an executable that can extract dll exports, and format them in the style of linker commands - you don't have to do that yourself, project is just here for reference
 - the ddb_dev project uses the output from the above (ddb_dev.cpp) to forward all functions but one to the original library, and implement the single function we want to alter
+
+For more info [check this blog](https://devops.lol/azure-fpga).
